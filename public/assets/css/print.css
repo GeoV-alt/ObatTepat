@@ -1,0 +1,94 @@
+@page {
+    size: A4 portrait;
+    margin: 14mm;
+}
+
+.report-sheet {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+}
+
+.report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 0.9rem;
+    margin-bottom: 1.15rem;
+}
+
+.report-section {
+    margin-bottom: 1.3rem;
+    break-inside: avoid;
+}
+
+.report-section h2 {
+    font-size: 1.05rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.3rem;
+    margin-bottom: 0.65rem;
+}
+
+.report-footer {
+    border-top: 1px solid var(--border);
+    padding-top: 0.75rem;
+    font-size: 0.84rem;
+    color: var(--muted);
+}
+
+@media print {
+    body {
+        background: #ffffff !important;
+        color: #111111 !important;
+        font-size: 10.5pt;
+    }
+
+    .sidebar,
+    .topbar,
+    .no-print,
+    .flash-stack,
+    .toast-region,
+    .skip-link,
+    .drawer-backdrop {
+        display: none !important;
+    }
+
+    .app-shell {
+        display: block !important;
+    }
+
+    .app-main {
+        max-width: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .report-sheet {
+        border: 0 !important;
+        padding: 0 !important;
+        background: #ffffff !important;
+    }
+
+    .chip {
+        border: 1px solid #555555 !important;
+        background: transparent !important;
+        color: #111111 !important;
+    }
+
+    table {
+        font-size: 9.5pt;
+    }
+
+    th {
+        background: #f0f0f0 !important;
+        color: #111111 !important;
+    }
+
+    a {
+        color: #111111 !important;
+        text-decoration: none !important;
+    }
+}
